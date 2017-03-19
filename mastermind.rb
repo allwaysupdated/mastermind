@@ -7,20 +7,26 @@ p answer #4debug
 input = Array.new
 input = [gets.to_i, gets.to_i, gets.to_i, gets.to_i]
 p input
-place = 0
+i = 0
+lmao = []
+wrong = ["o"]
 while running
   if input == answer
     running = false
       system "cls"
         abort
-  elsif input[place] != answer[place]
-    place += 1
-    puts "o"
-      place += 1
-        input = [gets.to_i, gets.to_i, gets.to_i, gets.to_i]
-  else
-    puts "x"
-      place +=1
-        input = [gets.to_i, gets.to_i, gets.to_i, gets.to_i]
+  end
+  if input[0] != answer[0]
+    #i += 1
+    lmao << wrong
+    p lmao
+  elsif input[1] != answer[1]
+      #i +=1
+    #  input = [gets.to_i, gets.to_i, gets.to_i, gets.to_i]
+  end
+  if input[2] != answer[2]
+  #  p lmao +"o"
+  end
+  if input[3] != answer[3]
   end
 end
