@@ -16,12 +16,13 @@ def guessinggame(answer:)
   i = 0
   progress = ["-", "-", "-", "-"]
   endgame = ["x","x","x","x"]
+  system("cls")
   puts "
 
 
 
 
-                                                  ENTER GUESS (" + answer.length.to_s + " )NUMBERS"
+                                                                                                          ENTER GUESS (" + answer.length.to_s + " )NUMBERS (exp:1234)"
   while progress != endgame
     input = gets.chomp.split("")
     input[1.to_i]
@@ -33,10 +34,10 @@ def guessinggame(answer:)
         i += 1
         system("cls")
         puts "
-                                                PLACE IS: " + (i+1).to_s
+                                                                                                        PLACE IS: " + (i+1).to_s
                             puts "
-                                                PROGRESS IS: " + progress.to_s
-                              puts "            LAST GUESS:" + input.to_s
+                                                                                                        PROGRESS IS: " + progress.to_s
+                              puts "                                                                                      LAST GUESS:" + input.to_s
 
         checker += 1
         if i == 4
@@ -48,10 +49,10 @@ def guessinggame(answer:)
         i += 1
         system("cls")
         puts "
-                                                    PLACE IS: " + (i+1).to_s
+                                                                                                        PLACE IS: " + (i+1).to_s
                             puts "
-                                                    PROGRESS IS: " + progress.to_s
-                                  puts "            LAST GUESS:" + input.to_s
+                                                                                                        PROGRESS IS: " + progress.to_s
+                                  puts "                                                                                     LAST GUESS:" + input.to_s
 
         checker += 1
         if i == 4
@@ -70,6 +71,6 @@ system("cls")
 puts "
 
 
-                                                                                                          ENTER DIFFICULTY"
+                                                                                                          ENTER DIFFICULTY (MAX DIFFICULTY = 9)"
 answer = randomnumbers(difficulty:gets.to_i)
 p guessinggame(answer: answer)
